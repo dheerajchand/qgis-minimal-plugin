@@ -15,11 +15,20 @@ so the code that actually does something is not hidden among generated boilerpla
 
 ## How to use it?
 
-1. Create a new python plugin directory, e.g. ```~/.qgis2/python/plugins/minimal```
-2. Copy ```metadata.txt``` and ```__init__.py``` to that directory
-3. Start QGIS and enable the plugin (menu Plugins > Manager and Install Plugins...)
+1. Copy this folder (but not .git) into a new plugin folder e.g ```~/.qgis2/python/plugins/minimal```
+2. Change the name and details in metadata.txt
+3. Start QGIS and enable the plugin (search for the name you gave it) (menu Plugins > Manager and Install Plugins...)
 
 Now you should see a "Go!" button in your "Plugins" toolbar (make sure it is enabled in menu Settings > Toolbars > Plugins).
 
-The next step is to change the metadata (e.g. plugin title and description) in ```metadata.txt``` and
-start adding your own code to ```__init__.py```. Have fun!
+4. Add code to __init__.py
+
+Have fun!
+
+
+### Loading resources
+
+```
+import resources
+icon = resources.icon("myicon.svg")
+```
