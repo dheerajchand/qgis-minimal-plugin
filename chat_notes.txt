@@ -1,0 +1,43 @@
+nathanw [7:44 PM] 
+this is a good start
+
+
+[7:44] 
+https://docs.qgis.org/2.14/en/docs/pyqgis_developer_cookbook/index.html
+
+
+[7:44] 
+and for loading UI files on the fly use this
+
+
+new messages
+[7:45] 
+https://stackoverflow.com/a/17133008/6335
+stackoverflow.com
+Linking a qtDesigner .ui file to python/pyqt?
+So if I go into QtDesigner and build a UI, it'll be saved as a .ui file. How can I make this as a python file or use this in python?
+ 
+
+
+[7:45] 
+e.g this
+
+
+[7:45] 
+ ```import sys
+from PyQt4 import QtGui, uic
+
+class MyWindow(QtGui.QMainWindow):
+    def __init__(self):
+        super(MyWindow, self).__init__()
+        uic.loadUi('mywindow.ui', self)
+        self.show()
+```
+
+
+[7:46] 
+uic.loadUi('mywindow.ui', self) is there key thing there
+
+
+[7:46] 
+saves on the build step that you see in most other plugin notes
